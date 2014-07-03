@@ -1,0 +1,9 @@
+#ps1
+
+#Install Go 1.3
+
+#$env:gopath = "C:\Go\"
+$RPC_PATH =  Join-Path $env:gopath "src\pkg\net\rpc"
+$RPC_NEW_PATH = Join-Path $env:gopath "src\github.com"
+Copy-Item -Recurse $RPC_PATH $RPC_NEW_PATH -Force 
+go get github.com\natefinch\npipe
