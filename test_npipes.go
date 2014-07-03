@@ -44,7 +44,7 @@ func main(){
 		}
 		go http.Serve(l, nil)
 
-        client, err := rpc.DialHTTP("tcp", pipe_path)
+        client, err := rpc.DialHTTP("pipe", pipe_path)
 		if err != nil {
 			log.Fatal("dialing:", err)
 		}

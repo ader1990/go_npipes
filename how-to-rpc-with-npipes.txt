@@ -7,3 +7,12 @@ $RPC_PATH =  Join-Path $env:gopath "src\pkg\net\rpc"
 $RPC_NEW_PATH = Join-Path $env:gopath "src\github.com"
 Copy-Item -Recurse $RPC_PATH $RPC_NEW_PATH -Force 
 go get github.com\natefinch\npipe
+
+#When running the test file without any changes in the src\github
+#go run .\test_npipes.go
+#2014/07/03 11:28:03 dialing:dial tcp: missing port in address \\.\pipe\test
+#exit status 1
+
+#After changes
+#go run .\test_npipes.go
+#Arith: 7*8=56
